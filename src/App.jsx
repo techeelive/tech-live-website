@@ -61,7 +61,10 @@ function App() {
     <>
       <header className="site-header">
         <nav className="container nav">
-          <a href="#home" className="brand">Tech.Live</a>
+          <a href="#home" className="brand">
+            <img src="/logo.svg" alt="Tech.Live" className="logo" />
+            <span>Tech.Live</span>
+          </a>
           <div className="nav-links">
             <a href="#home">Home</a>
             <a href="#about">About</a>
