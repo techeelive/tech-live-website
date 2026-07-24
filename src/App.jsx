@@ -6,9 +6,36 @@ function App() {
   const [submitMessage, setSubmitMessage] = useState('');
 
   useEffect(() => {
-    fetch('/api/content')
+    fetch('/api/health')
       .then((res) => res.json())
-      .then((data) => setContent(data))
+      .then(() => setContent({
+        hero: {
+          title: 'Welcome to Tech.Live',
+          subtitle: 'Technology news • tutorials • reviews',
+          description: 'Tech.Live is your trusted destination for technology news, tutorials, reviews, and digital learning.',
+        },
+        topics: [
+          'Web Development',
+          'Programming',
+          'Artificial Intelligence',
+          'Machine Learning',
+          'Cybersecurity',
+          'Cloud Computing',
+          'Digital Marketing',
+          'Mobile Development',
+          'Software Reviews',
+          'Startups',
+          'Gadgets',
+          'Tech Careers',
+        ],
+        faqs: [
+          { question: 'Is Tech.Live free?', answer: 'Yes. Most articles and tutorials are available free of charge.' },
+          { question: 'How often is new content published?', answer: 'New articles, tutorials, and news are published regularly.' },
+          { question: 'Can I contribute articles?', answer: 'Yes. Visit the Write for Us section for submission guidelines.' },
+          { question: 'How do I report an error?', answer: 'Contact our editorial team using the Contact page.' },
+          { question: 'Do you review products?', answer: 'Yes. We publish honest and independent technology reviews.' },
+        ],
+      }))
       .catch(() => setContent({ hero: {}, topics: [], faqs: [] }));
   }, []);
 
