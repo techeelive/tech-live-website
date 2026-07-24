@@ -1,0 +1,4 @@
+Contact: security@techee.live
+Expires: 2027-07-24T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://techee.live/.well-known/security.txt
