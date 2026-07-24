@@ -1,10 +1,17 @@
 {
-  "name": "techee-website",
+  "name": "@techeelive/techee-website",
   "description": "Tech.Live - Technology News, Tutorials, and Reviews Platform",
   "author": "Tech.Live",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techeelive/techee-website.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "type": "module",
   "engines": {
     "node": ">=24.0.0",
